@@ -1,5 +1,5 @@
 #100DaysOfCode<br>
-Started: August 1, 2025<br><br>>
+Started: August 1, 2025<br><br>
 
 This is a 100-day challenge that I've started with the main objective of building at least 1 or 2 MERN stack projects.<br>
 I have zero knowledge of any of the technologies except for HTML, CSS and JavaScript.<br>
