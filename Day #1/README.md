@@ -1,6 +1,6 @@
-Day #1
+Day #1<br><br>
 
-I originally went through HTML and CSS at the end of 2024 (December).
-Today, I recapped what I previously learned before I go further.
+I originally went through HTML and CSS at the end of 2024 (December).<br>
+Today, I recapped what I previously learned before I go further.<br><br>
 
 Mainly, I just went through the HTML structure and basics of CSS.
