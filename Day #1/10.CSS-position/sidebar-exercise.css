@@ -1,0 +1,71 @@
+body{
+  height: 2000px;
+}
+
+p{
+  font-family: Roboto,Arial;
+}
+
+.profile-photo{
+  display: flex;
+  flex-direction: column;
+
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  width: 100px;
+  background-color: rgb(44, 43, 43);
+  align-items: center;
+}
+
+.image{
+  width: 70px;
+  height: 70px;
+  border-style: none;
+  border-radius: 35px;
+  object-fit: cover;
+  object-position: right;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.info-page{
+  display: flex;
+  flex-direction: column;
+  background-color:rgb(48, 48, 48);
+
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left:100px;
+  width: 280px;
+}
+
+.info{
+  padding-left: 10px;
+  padding-right: 10px;
+  display: grid;
+  grid-template-columns: 1fr 20px;
+}
+
+.p1{
+  color: white;
+}
+
+.sign{
+  color: rgb(170, 170, 170);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+.info-info{
+  padding-left: 10px;
+}
+
+.p2{
+  color: rgb(153, 151, 151); 
+  cursor: pointer;
+}
+

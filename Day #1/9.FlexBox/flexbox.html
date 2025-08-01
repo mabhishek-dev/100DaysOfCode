@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flexbox</title>
+  </head>
+  <body style="padding-bottom: 1000px;
+  margin: 0;">
+    <div style="display: grid;
+    grid-template-columns: 100px 100px 1fr;">
+
+    <div style="background-color: lightblue;">
+      This is 1fr but it takes up only 100px because grid template restricts it
+    </div>
+
+    <div style="background-color: lightpink;">
+      This is 100px
+    </div>
+
+    <div style="background-color: lightblue;">
+      This is 2fr 
+      <p>This row is with respect to CSS-GRID,but in using flexbox:></p>
+    </div>
+
+    </div>
+
+
+    <div style="display: flex;
+    margin-top: 50px;">
+      
+      <div style="background-color: lightblue;
+      flex: 1">
+        This is 1 flex and is not restricted by grid
+      </div>
+  
+      <div style="background-color: lightpink;
+      width: 100px;">
+        This is 100px
+      </div>
+  
+      <div style="background-color: lightblue;
+      flex: 2">
+        This is 2 flex
+        <p>This row is by using flexbox and it show cases inline-block making it a flexible layout</p>
+      </div>
+
+    </div>
+    
+    <div style="
+    display: flex;
+    justify-content: center;
+    background-color: aqua;">
+    
+    <div>
+      This is at the center
+  </div>
+    </div>
+
+    <div style="
+    margin-top: 20px;
+    display: flex;
+    justify-content: start;
+    background-color: aqua;">
+    
+    <div>
+      This is at the start
+  </div>
+    </div>
+
+    <div style="
+    margin-top: 20px;
+    display: flex;
+    justify-content: end;
+    background-color: aqua;">
+    
+    <div>
+      This is at the end
+  </div>
+    </div>
+
+    <div style="
+    margin-top:50px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    border-color: black;
+    border-style: solid;">
+   
+   <div style="background-color: lightblue;">Start</div>
+   <div style="background-color: lightblue;">Center</div>
+   <div style="background-color: lightblue;">End</div>
+  </div>
+
+  <div style="
+    margin-top:50px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    border-color: black;
+    border-style: solid;">
+   
+   <div style="background-color: lightblue;">Start</div>
+   <div style="background-color: lightblue;">Center</div>
+   <div style="background-color: lightblue;">End</div>
+  </div>
+
+  <div style="
+    margin-top:50px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    border-color: black;
+    border-style: solid;">
+   
+   <div style="background-color: lightblue;">Start</div>
+   <div style="background-color: lightblue;">Center</div>
+   <div style="background-color: lightblue;">End</div>
+  </div>
+
+  <div style="
+    margin-top:50px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-color: black;
+    border-style: solid;">
+   
+   <div style="background-color: lightblue;">Start</div>
+   <div style="background-color: lightblue;">Center</div>
+   <div style="background-color: lightblue;">End</div>
+  </div>
+  </body>
+</html>

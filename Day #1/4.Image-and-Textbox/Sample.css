@@ -1,0 +1,26 @@
+.image{
+  width: 800px;
+}
+
+.image1{
+  width: 1000px;
+  height: 500px;
+}
+
+.image2{
+  width: 1000px;
+  height: 1000px;
+  object-fit: contain;
+  object-position: center;
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
+}
+
+.searchbar{
+  background-color: aqua;
+  color: darkcyan;
+  font-size: large;
+  font-weight: bold;
+  margin: 50px;
+}

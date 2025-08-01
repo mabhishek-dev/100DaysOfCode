@@ -1,0 +1,198 @@
+.d1{
+display: block;
+margin-bottom: 20px;
+}
+
+.d2{
+  background-color: rebeccapurple;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.d3{
+  vertical-align:top;
+  display: inline-block;
+  background-color: palevioletred;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+}
+
+.d4{
+  width: 300px;
+  height: 80px;
+  border-style: solid;
+  border-color: black;
+}
+
+.p1, .btn1{
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.d5{
+  width: 350px;
+  height: 110px;
+  border-style: none;
+  background-color: rgb(41, 39, 39);
+}
+
+.p2{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: white;
+  padding-left: 10px;
+  padding-top: 15px;
+  color: white;
+}
+
+.p3{
+  padding-left: 10px;
+  color: lightgray;
+}
+
+
+.d6{
+  padding-top: 10px;
+  margin-top: 50px;
+  width: 390px;
+  height: 60px;
+  box-shadow: 2px 1px 10px rgb(103, 102, 102);
+  border-radius: 8px;
+}
+
+.img{
+  margin-left: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
+  object-fit:cover;
+  object-position: right;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.txt1{
+  padding-left: 10px;
+  border-style: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 100px;
+}
+
+.btn2{
+  background-color: rgb(62, 158, 218);
+  width: 60px;
+  border-radius: 30px;
+  border-style: none;
+  color: white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+
+.btn2:hover{
+  background-color: rgb(5, 70, 110);
+}
+
+.d7{
+  margin-top: 40px;
+  width: 200px;
+  height: 400px;
+  display: inline-block;
+  margin-right: 400px
+}
+
+.img2{
+  width: 180px;
+  height: 220px;
+  object-fit: cover;
+  object-position:calc(-140px);
+}
+
+
+.d8{
+  width: 180px;
+  display: inline-block;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.p4, .p5{
+  padding-left: 10px;
+}
+.p5{
+  color: gray;
+}
+
+.btn3{
+  background-color: rgb(24, 119, 242);
+  color: white;
+  border: none;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 4px;
+}
+
+.dfull{
+  width: 1000px;
+  height: 100px;
+  display: inline-block;
+}
+
+
+.img3{
+  display: block;
+  width: 180px;
+  height: 220px;
+  object-fit: cover;
+  object-position:calc(-140px)
+}
+
+.ind1, .ind2, .ind3{
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.goog{
+  width: 300px;
+  height: 300px;
+}
+
+.googimg{
+  margin-left: 200px;
+  margin-top: 100px;
+  display: block;
+}
+
+.inp{
+  margin-left: 195px;
+  margin-bottom: 30px;
+  width: 500px;
+  border-radius: 250px;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-style: none;
+  box-shadow: 1px 1px 50px rgb(203, 197, 197);
+  display: block;
+}
+
+.btn4{
+  margin-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border: none;
+  cursor: pointer;
+}
+.btn{
+  width: 500px;
+  margin-left: 320px;
+}
