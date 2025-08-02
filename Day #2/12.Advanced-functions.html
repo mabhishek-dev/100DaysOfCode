@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12.Advanced functions</title>
+</head>
+<body>
+    <script>
+        fun1(); //Here this can be called anywhere ,before or after the function is declared and this is called hoisting
+        function fun1(){
+            console.log('Hello');
+        }
+        //The above is function with name fun1,the thing is function are values like numbers and strings. so,we can actually save it a variable.
+        // Note:In the backend what happens is: 
+        // var fun1 = function(){
+        //     console.log('Hello');
+        // } Even though it uses var ,it gives us the flexibility to call the function anywhere and is called hoisting.
+        
+        const fun2 = function(){ //Function without a name is called anonymous function
+            console.log('Hello');
+        }
+        fun2();//This can only be called after it has been initialized and not before that.
+        //Here you can see that its the same as above but its store as a value in fun2 and also it can be observed that this function does not have a name as it is saved as a value and can be accessed using a variable its not necessary to give the function a name[as long as it can be accessed].
+        console.log(typeof(fun2));
+
+        //As functions are values it can also be stored in an object and can be accessed:
+        const obj={
+            name:'tempName',
+            fun3: function(){
+                console.log('Hello'); //Function saved inside an object is called method
+            }
+        }
+        obj.fun3();
+
+
+        //we can pass value to a function
+
+        function fun4(tempValue){
+            console.log(tempValue)
+        }
+        fun4(10);
+
+
+        //we can also pass another function as paramenter
+
+        function f5(tempParam){
+            tempParam();
+        }
+
+        f5(function(){
+            console.log('tempParam');
+        })
+
+        //setTimeout(function-that-has-to-be-executed,after-how-much-time) takes 2 parameter.
+
+        setTimeout(function(){
+            alert('Secnd Hello')
+        },10000); //1000=1s so 10000=10s this function will be executed after 10s only,even if there is anyother code after this it will continue to execute that and after 10s only this will get executed and this is called Ashynchorous code as it wont wait the present code to finish but will continue unlike synchorous code which completes the present code and then continue.
+
+        alert('First Hello');
+
+        //setInterval() Same parameter but: 
+        // setInterval(function(){
+        //     console.log('Im running multiple times')
+        // },4000) //After each 4s it runs again meaning every interval here,4s it will run again and again and this is asynchorous code
+
+        
+
+        //forEach //Version I using function
+
+        //temparr=[10,20,30];
+        [10,20,30].forEach(function(value,index){ //or temparr.forEach.....
+            console.log(`Value:${value} Index:${index}`);
+        });
+
+        let obj1={
+            arr:[50,100,150]
+        }
+  
+        //forEach //Version II by using => and this is called arrow functions and is a shorter way to write functions
+        obj1.arr.forEach((val,idx)=>{
+            console.log(`Value:${val} Index:${idx}`);
+        })
+
+        
+        //forEach does not have continue or break so:
+
+        a=[1000,2000,3,4000];
+        a.forEach((val,idx)=>{
+            if(val===3){
+                return; //So by using return we indirectly give the control back to forEach without letting the rest of the code to run and so performs as continue
+            }
+            console.log(`Value:${val} Index:${idx}`);
+        }) //if we want to use break its better to use a regular loop as using break is tough in forEach
+
+
+        // //arrow function
+        let temparr1 = function(tempval){
+            console.log(tempval);
+        }
+        //the same by using arrow functions:
+
+        let temparr2 = (tempval)=>{
+            console.log(tempval)
+        }
+        temparr1(10);
+        temparr2(20);
+
+        //Tips for forEach
+
+        //if there is only 1 parameter then no need of ():
+        
+        let something1 = temp =>{
+            console.log(temp);
+        }
+        something1('no ()');
+
+        //if there is only 1 line in the code then we can put it as follows and also it automatically returns it too so need to add return also
+
+        let something2 = temp => temp+1
+        console.log(something2(10));
+
+        // The above is same as:
+        // let something2 = (temp)=>{
+        //     return temp+1;
+        // }
+        // console.log(something2(10));
+
+
+        //if an object property has a function then:
+
+        let obj2={
+            method: ()=>{'...'},//this can also b directly written as:
+            method(){'...'}
+        }
+
+        // array filter method
+
+        console.log([1,-2,3].filter((val,idx)=>{
+            if(val>=0){
+                return true;
+            }else{
+                return false;
+            } //This if-else can be avoided if I write this directly: return val>=0 ,which will returb true or false based on the condition
+        }));
+
+        //So fliter takes a function as parameter so, here val takes the the element in array and idx has the index and just itrates on,so when val>=0 we return true and the element in array gets returned and if we encounter -ve we return false so the -ve element is not returned so by this we only retain/filter +ve numbers.
+
+        //array map method
+        //Its same as above wrt parameters
+
+        const arr= [1,2,3,4].map((val,idx)=>{
+            return val*2;
+        });
+
+        console.log(arr); //So map goes through each array element due to the function and it creates a new array and adds whatever is returned to the new array,So example: when 2 is passed the 2 is multiplied by 2 and is returned and this value is added to the new array arr(here).
+
+
+        // This code: 
+        // arrconst arr= [1,2,3,4].map((val,idx)=>{
+        //     return val*2;
+        // }); 
+        // can be shortened as idx is not used and it falls under 1 line:
+
+        // const arr1= [1,2,3,4].map(val=> val*2);
+
+
+
+
+        //closure: A function has access to a value and will always have access to that value.
+        //Like in a for loop we can print the index but once comming out of it or when trying to access it outside it does not exist and this when inside a foor loop to have access to it is called closure.
+    </script>
+</body>
+</html>

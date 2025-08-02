@@ -1,0 +1,19 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.js-subBtn{
+    color: white;
+    background-color: rgb(255, 36, 36);
+    border:none;
+    padding: 10px;
+    font-size: large;
+    border-radius: 25px;
+    width: 120px;
+    cursor: pointer;
+}
+
+.buttonElementClicked{
+    color: black;
+    background-color: rgb(188, 188, 188);
+}

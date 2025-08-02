@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>DOM</title>
+        <link rel="stylesheet" href="9.DOM-simple3.css">
+    </head>
+
+    <body>
+        <p>Shipping Calculator</p>
+        <p>Orders above Rs.50 is free delivery</p>
+        <div class="content">
+            <input placeholder="Enter the order amount" type="number" class="js-orderAmount orderAmount" style="width: 24vb;" onkeydown=" handleEnterkey(event);"> 
+            <!-- here you can see there is js-orderAnount which is used for js and just orderAmount is used for css,this is allowed where we can create 2 or classes for the same or we can use 1 itself -->
+            <!-- Click or keydown are events while onclick or onkeydown are event listeners -->
+            <button onclick="calcTotal();" class="cfr-btn">Confirm</button>
+        </div>
+
+        <p class="orderTotal"></p>
+
+
+
+        <script>
+
+            function calcTotal(){
+                let Amount = Number(document.querySelector('.js-orderAmount').value); //parseInt can be used also .value is used to retrieve data in placeholder its in string form
+                Amount<=0 ? document.querySelector('.orderTotal').innerHTML='Minimum Order Value is Rs.1' : (Amount>=50 ? document.querySelector('.orderTotal').innerHTML = 'Total Order Value without shipping charges: Rs.'+Amount 
+                : document.querySelector('.orderTotal').innerHTML=`Total Order Value with shipping charges:Rs.10+${Amount}=Rs.${Amount+10}`);
+            }
+
+            function handleEnterkey(event){
+                if(event.key==='Enter') calcTotal();//Event is an object and key is actally a property of event 
+            }
+        </script>
+    </body>
+</html>

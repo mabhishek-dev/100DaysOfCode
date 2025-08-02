@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rock Paper Scissor Game</title>
+        <link rel="stylesheet" href="12.rsp-setInterval.css">
+    </head>
+
+    <body>
+        
+        <p class="rps-title">Rock Paper Scissor Game</p>
+
+        <div class="rps-emoji">
+            <button onclick="
+            resultMove('rock');" class="btn">
+                <img src="rock-emoji.png">
+            </button>
+
+            <button onclick="
+                resultMove('paper');
+                " class="btn">
+                <img src="paper-emoji.png">
+            </button>
+
+            <button onclick="
+                resultMove('scissor');
+                " class="btn">
+                <img src="scissor-emoji.png">
+            </button>
+        </div>
+
+        <div class="reset">
+            <button onclick="
+            scoreObj.win=0;
+            scoreObj.losses=0;
+            scoreObj.tie=0
+            localStorage.removeItem('scoreObj');
+            updateScoreElement();
+            document.querySelector('.js-result').innerHTML = '';
+            document.querySelector('.js-moves').innerHTML ='';"
+            class="reset-btn">
+                Reset Score
+            </button> 
+            <button class="auto-Play" onclick="autoPlay();">AutoPlay</button>
+        </div>
+
+        
+        
+        <p class="js-result"></p>
+        <p class="js-moves"></p>
+        <p class="js-score"></p>
+
+        <script src="12.rsp-setInterval.js"></script>
+
+   </body>
+</html>
+

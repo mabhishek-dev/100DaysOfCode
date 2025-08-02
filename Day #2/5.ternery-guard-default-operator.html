@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body></body>
+    <script>
+        //Without Using Ternery Operator
+        if(true){
+            console.log(alert('True'));
+        }else{
+            console.log(alert('False'));
+        }
+
+        // Using Ternery Operator wrt ?:
+        //condition ? value_if_true : value_if_false;
+
+
+        false ? alert('True') : alert('False');
+
+        let num=5;
+        const tempNum = num ? 'Greater than 0' : 'Not Greater than 0';
+        console.log(tempNum);
+
+
+        //Without Guard Operator
+
+        let num1=5;
+        if(num1!=10){
+            console.log('False');
+        }
+
+        //Using Guard Operator wrt &&(AND)
+
+        let result= num1==10 && console.log('10'); //As && is used so,if left side is false so it does not matter if right is true or false
+        console.log(result);
+
+        //Without Deafult Operator
+        let num2=10
+        if(num2){
+            console.log('Even');
+        }
+
+        //Using Default Operator wrt ||(OR)
+
+        let result2= false || true //Any one has to be true for the whole thing to be true
+        console.log(result2);
+    </script>
+</html>

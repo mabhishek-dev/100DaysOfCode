@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html>
+    <head><title>DOM</title></head>
+    <link rel="stylesheet" href="9.DOM-simple1.css">
+    <body>
+
+        <h1>Youtube Subscribe Button</h1>
+        <button onclick=
+        "subscribe();" class="js-subBtn">
+        Subscribe
+    </button>
+
+        <script>
+            function subscribe(){
+                let buttonElement = document.querySelector('.js-subBtn');
+                buttonElement.innerText === 'Subscribe' ? (buttonElement.innerHTML = 'Subscribed', buttonElement.classList.add('buttonElementClicked')) : (buttonElement.innerHTML = 'Subscribe',buttonElement.classList.remove('buttonElementClicked'));
+            }
+        </script>
+    </body>
+</html>
+

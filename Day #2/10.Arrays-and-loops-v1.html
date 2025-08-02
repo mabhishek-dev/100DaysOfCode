@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays and Loops</title>
+</head>
+<body>
+    <script>
+        let arr=[10,30,40,'String',true,{objprop: 'objval'}];  //An array is an object(special type of object)
+        console.log(arr);
+        console.log(arr[5].objprop);
+        arr[1]=20;
+        console.log(arr);
+
+        console.log(typeof([1,2])); //It's and object
+        console.log(Array.isArray([1,2])); //Checks if array and prints true if it is
+        console.log(arr.length);
+        arr.push(5);//Adds at the end
+        arr.shift();//Removes the first index element -->removes 10
+        arr.splice(0,2);//The first num is the starting index and second num is the how many elements from that index has to be removed -->removes 20 and 40
+        console.log(arr);
+    </script>
+</body>
+</html>

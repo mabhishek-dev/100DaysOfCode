@@ -1,0 +1,58 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    text-align: center;
+}
+
+.inp{
+    display: flex;
+    justify-content: center;
+}
+
+
+.taskInp,.dateInp{
+    padding: 10px;
+    margin-right: 10px;
+    font-size: medium;
+    width: 300px;
+}
+
+.dateInp{
+    width: 150px;
+}
+
+.addBtn{
+    width: 100px;
+    background-color: rgb(0, 195, 0);
+    border: none;
+    border-radius: 3%;
+}
+
+
+.printData{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: 383px;
+    margin-right: 383px;
+}
+
+
+.js-printData{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.renderVal{
+    align-items: center;
+}
+
+
+.js-remove, .addBtn{
+    cursor: pointer;
+}

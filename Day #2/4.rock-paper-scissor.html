@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rock Paper Scissor Game</title>
+        <style>
+            .rps{
+                display: flex;
+                justify-content: center;
+            }
+        </style>
+    </head>
+
+    <body>
+        <p style="text-align: center;
+        font-weight: bold;">Rock Paper Scissor Game</p>
+
+        <div class="rps">
+
+            <button onclick="
+                let computerMove =Math.random();
+                if(computerMove>=0 && computerMove<1/3){
+                    computerMove='rock';
+                } else if(computerMove>=1/3 && computerMove<2/3){
+                    computerMove='paper';
+                } else{
+                    computerMove='scissor';
+                }
+                let result='';
+                if(computerMove=='rock'){
+                    result='Tie';
+                } else if(computerMove=='paper'){
+                    result='Lose';
+                } else{
+                    result='Win';
+                }
+                console.log(alert(`You choose Rock \nComputer choose ${computerMove} \n\n Result: ${result}!!`));
+                ">
+                Rock
+            </button>
+
+            <button onclick="
+                let computerMove1 =Math.random();
+                if(computerMove1>=0 && computerMove1<1/3){
+                    computerMove1='rock';
+                } else if(computerMove1>=1/3 && computerMove1<2/3){
+                    computerMove1='paper';
+                } else{
+                    computerMove1='scissor';
+                }
+                let result1='';
+                if(computerMove1=='rock'){
+                    result1='Win';
+                } else if(computerMove1=='paper'){
+                    result1='Tie';
+                } else{
+                    result1='Lose';
+                }
+                console.log(alert(`You choose Paper \nComputer choose ${computerMove1} \n\n Result: ${result1}!!`));
+                ">
+                Paper
+            </button>
+
+            <button onclick="
+                let computerMove2 =Math.random();
+                if(computerMove2>=0 && computerMove2<1/3){
+                    computerMove2='rock';
+                } else if(computerMove2>=1/3 && computerMove2<2/3){
+                    computerMove2='paper';
+                } else{
+                    computerMove2='scissor';
+                }
+                let result2='';
+                if(computerMove2=='rock'){
+                    result2='Lose';
+                } else if(computerMove2=='paper'){
+                    result2='Win';
+                } else{
+                    result2='Tie';
+                }
+                console.log(alert(`You choose Scissor \nComputer choose ${computerMove2} \n\n Result: ${result2}!!`));
+                ">
+            Scissor</button>
+
+        </div>
+    </body>
+
+    <script></script>
+</html>

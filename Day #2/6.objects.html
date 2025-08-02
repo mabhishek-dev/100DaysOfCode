@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Objects</title></head>
+
+    <body>
+        <script>
+            //objects= property:value pair
+
+            const obj={ //Note we have declared obj as const but we can change property value as obj has the reference of the p:v and not the actual value.
+                p1: 'v1',
+                p2: 10
+            };
+            console.log(obj);
+            console.log(obj.p1);
+            console.log(obj.p2);
+            obj.p1=true;
+            console.log(obj.p1);
+            delete obj.p1;
+            console.log(obj);
+
+//Nested Objects
+            const obj1={
+                p3:{
+                    p4:1,
+                    p5:2
+                }
+            };
+            console.log(obj1.p3.p4);
+
+            //Functiuon inside objects allowed for javasctript objects and not JSON objects
+
+            const obj3={
+                func : function tempfunc(){
+                    console.log('This is a function');
+                }
+            };
+            obj3.func();
+
+//JSON
+            console.log(JSON.stringify(obj1)); //js to JSON
+            const jsonstring = JSON.stringify(obj1);
+            console.log(JSON.parse(jsonstring)); //JSON to js
+
+//Local Storage
+localStorage.setItem('lsname','lscontent');//the content has to be type string so we use parse and stringify to convert them to string and then vice versa
+console.log(localStorage.getItem('lsname'));
+
+
+const obj4={
+    'name':'Alpha',
+    'no':'44'
+}
+
+localStorage.setItem('name',JSON.stringify(obj4));//Converted to JSON object which is it terms of a string
+console.log(JSON.parse(localStorage.getItem('name')));//In the form of string so we convert it back to js obj
+        </script>
+    </body>
+</html>

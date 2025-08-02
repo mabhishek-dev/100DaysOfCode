@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>
+      Boolean and if statement
+    </title>
+  </head>
+
+  <body></body>
+
+  <script>
+    console.log(4>2);
+    console.log( 5== '5'); //Both are converted in same data type so '5' is converted to 5
+    console.log( 5 === '5'); //Checks as it is
+    console.log( 5 != '5'); //Both are converted in same data type so '5' is converted to 5
+    console.log( 5 !== '5'); //Checks as it is
+
+    if(true){
+    console.log('If statement is true');
+  }
+
+  if(false){
+    console.log('Statement is false');
+  } 
+  else{
+    console.log('Else statment executed');
+  }
+
+  // let age=18;
+
+  // if(age>=18){
+  //   console.log('Driver licence applicable');
+  // } else{
+  //   console.log('Driver licence not applicable')
+  // }
+
+  const age =44;
+  if(age>=18){
+    console.log('Driver licence applicable');
+  } else if(age>=16){
+    console.log('Almost there!');
+  } else{
+    console.log('Driver licence not applicable');
+  }
+  </script>
+</html>

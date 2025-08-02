@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+    <head><title>DOM</title></head>
+
+    <body>
+        <button>Click</button>
+        <button class="js-btn">Click*2</button> <!-- js is used to show that the button is used in js -->
+        <script>
+            // document.body.innerHTML=('Hello!!');
+            // document.title=('DOM V2');
+            // console.log(document.title);
+
+            // document.body.innerHTML= '<button>Click V2</button>'
+
+            console.log(document.querySelector('button'));//The first button is selected also the button is an html but when done like it is a js object so methods can be applied
+            console.log(document.querySelector('body'));
+
+            console.log(document.querySelector('button').innerHTML); //Prints Click
+            console.log(document.querySelector('button').innerHTML='Click V2'); //Prints Click V2 and the innerHTML i.e the body cotent gets updated
+
+
+
+            const btnElem= document.querySelector('.js-btn'); //its a class selector so we need to use .js-btn 
+            console.log(btnElem);
+        </script>
+    </body>
+</html>

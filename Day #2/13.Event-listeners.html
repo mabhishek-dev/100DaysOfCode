@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event-listeners</title>
+</head>
+<body>
+    <!-- rather using onclick we can use Event-listeners -->
+    <button class="js-btn">Click</button>
+
+    <input onkeydown="
+    if(event.key === 'a'){
+        alert('a pressed')
+    }" type="text" placeholder="Enter">
+
+    <script>
+        const btnEle= document.querySelector('.js-btn');
+        //addEventListener Takes 2 parameter, the first is the event here it is click and the second is a function that has to happen uppon encountering that event.
+        //An advantage is multiple event listeners can be added for an event unlick onclick also we can remove an event listener too
+        btnEle.addEventListener('click',()=>{  
+            alert('Hello');
+        });
+
+
+        const eventListenterFunc= ()=>{
+            alert('World');
+        }
+        btnEle.addEventListener('click',eventListenterFunc); //Note: eventListenterFunc is passed rather writing a function directly because if removeEventListener is used it has to have the same function passed as parameter
+
+        //removeEventListener
+        btnEle.removeEventListener('click',eventListenterFunc); //Note: Its takes the event as first parameter and the second is the function and the function needs to be same as the pre already existing eventlisteners function.
+
+
+
+        document.body.addEventListener('keydown',()=>{
+            alert('Key pressed'); //Any key pressed will alert Key pressed
+        })
+
+        document.body.addEventListener('keydown',()=>{
+            let key = event.key;
+            alert(`Key Pressed: ${key}`)
+        }) //The other way is to pass the event every time a key is pressed
+
+        document.body.addEventListener('keydown',(event)=>{
+            alert(`Key Pressed: ${event.key}`)
+        }) 
+        
+    </script>
+</body>
+</html>
