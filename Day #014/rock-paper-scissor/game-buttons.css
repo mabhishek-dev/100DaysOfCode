@@ -1,0 +1,19 @@
+#game-buttons{
+    padding-left: 350px;
+    padding-right: 350px;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+}
+.emoji-btn{
+    background-color: black;
+    border: 5px solid white;
+    border-radius: 200px;
+    margin-right: 22px;
+}
+.emoji{
+    width: 100px;
+    padding:42px;
+    padding-left: 38px;
+    padding-right: 38px;
+}
