@@ -8,4 +8,4 @@ Rock-Paper-Scissors Game: Fully working game that keeps track of scores.
 Play the game here: [Rock-Paper-Scissors](https://mabhishek-dev.github.io/Rock-Paper-Scissor-Game/)
 
 Todo List: Lets you add and remove tasks. Uses localStorage to remember them, and I added a button to switch between dark and light themes.
-Use the todo list here:[To-Do List](https://mabhishek-dev.github.io/Todo-List/)
+Use the todo list here: [To-Do List](https://mabhishek-dev.github.io/Todo-List/)
