@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/game-buttons.css">
+    <link rel="stylesheet" href="styles/game-controls.css">
+    <link rel="stylesheet" href="styles/render-result.css">
+    <title>Rock-Paper-Scissor</title>
+</head>
+<body>
+    <h1>Rock Paper Scissor Game</h1>
+
+    <div id="game-buttons">
+        <button class="emoji-btn" id="rock-btn-js">
+            <img class='emoji'src="emoji/rock-emoji.png">
+        </button>
+        <button class="emoji-btn" id="paper-btn-js">
+            <img class='emoji'src="emoji/paper-emoji.png">
+        </button>
+        <button class="emoji-btn" id="scissor-btn-js">
+            <img class='emoji'src="emoji/scissor-emoji.png">
+        </button>
+    </div>
+
+    <div id="game-controls">
+        <button id="reset-score">
+            Reset Score
+        </button>
+        <button id="auto-play">
+            AutoPlay
+        </button>
+    </div>
+
+    <div id="renderResult">
+        <p id="currResult-js"></p>
+        <p id="displayMove-js"></p>
+        <p id="score-js"></p>
+    </div>
+
+    <script src="script/play.js"></script>
+    <script src="script/reset.js"></script>
+    <script src="script/autoplay.js"></script>
+</body>
+</html>
