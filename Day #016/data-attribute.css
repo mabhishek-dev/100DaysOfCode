@@ -1,0 +1,8 @@
+.data-button{
+    width: 190px;
+    color: white;
+    background-color: black;
+    border-radius: 8px;
+    border-width: 20px;
+    margin-right: 10px;
+}
