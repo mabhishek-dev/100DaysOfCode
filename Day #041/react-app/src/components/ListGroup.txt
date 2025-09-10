@@ -1,0 +1,106 @@
+There were errors so look into this then go to the ListGroup.tsx
+
+ListGroup.tsx:
+
+
+import type { MouseEvent } from "react";
+//import { Fragment } from "react/jsx-runtime";
+
+function ListGroup() {
+  let items = ["New York", "San Francisco", "Tokyo", "London", "Paris"];
+  //let selectedIndex = -1; //-1 meaning no item selected, 0 means 1st item selected
+  // items = [];
+  // const getMessage = () => {
+  //   return items.length === 0 ? <p>No item found</p> : null;
+  // };
+
+  //Event Handler
+  //const handleClick = (event: React.MouseEvent<HTMLElement>) =>
+  const handleClick = (event: MouseEvent) => console.log(event);
+  /*
+  if (items.length === 0)
+    return (
+      <>
+        <h1>List</h1>
+        <p>No item found</p>
+      </>
+    );
+    */
+
+  return (
+    //jsx does not have for loop so we use map and it only accepts markup language so we use <li> and again it does not accept so the whole thing in {}
+    //no 'if' so we use ternary operator
+    <>
+      <h1>List</h1>
+      {/* {items.length === 1 ? <p>No item found</p> : null} */}
+      {/* {getMessage()} better way */}
+      {items.length === 0 && <p>No item found</p>}{" "}
+      {/* even better way refer ;ine 60 in note.txt*/}
+      <ul>
+        {items.map((item, index) => (
+          <li
+            // className="list-group-item active"
+            className="list-group-item active"
+            // {
+            //   selectedIndex === index
+            //     ? "list-group-item active"
+            //     : "list-group-item"
+            // }
+            key={item}
+            onClick={handleClick} //no need to call like-> handleClick() we just past refernce and tell react
+          >
+            {item}
+          </li> //we need to have key when we use map to let react know as when we dynamically chnage then it'll me needed
+        ))}
+      </ul>
+    </>
+  );
+}
+
+/*
+function ListGroup() {
+  return (
+    //<h1>Error</h1> Not allowed because in React a component can not return more than 1 element so <h1> is another element while <ul> is another one
+    // Every element: React.createElement('h1');
+    //To over come this we can wrap it in a <div> tag or a better way is to use fragment ->1. import fragment and use <Fragment> tag or use empty tag without importing ->both are valid
+
+    //But the below code is using manual writing but we can automate the same stuff
+    <>
+      <h1>List</h1>
+      <ul className="list-group">
+        <li className="list-group-item">An item</li>
+        <li className="list-group-item">A second item</li>
+        <li className="list-group-item">A third item</li>
+        <li className="list-group-item">A fourth item</li>
+        <li className="list-group-item">And a fifth one</li>
+      </ul>
+    </>
+  );
+}
+*/
+
+export default ListGroup;
+
+
+
+
+
+
+App.tsx :
+function App() {
+  let items = ["New York", "San Francisco", "Tokyo", "London", "Paris"];
+  const handleSelectedItem = (item: string) => {
+    console.log(item);
+  };
+  return (
+    <div>
+      {/*<Message></Message> This line can also be written as the below*/}
+      <ListGroup
+        items={items}
+        heading="Cities"
+        onSelectItem={handleSelectedItem}
+      />
+      {/* <ListGroup items={items} heading="NewList" /> work separtely with its own state */}
+    </div>
+  );
+}
